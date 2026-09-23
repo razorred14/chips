@@ -118,7 +118,7 @@ A conforming implementation should include tests for:
 
 ## Reference Implementation
 
-An exploratory prototype is available at [Chia-Network/chia-blockchain#21328](https://github.com/Chia-Network/chia-blockchain/pull/21328). That prototype currently applies the threshold during mempool admission and therefore does not conform to this specification. It must be revised to apply the threshold only during block construction before it can serve as the reference implementation for this CHIP.
+A conforming prototype is available at [Chia-Network/chia-blockchain#21328](https://github.com/Chia-Network/chia-blockchain/pull/21328). It applies the threshold in both block-construction paths while leaving mempool admission unchanged. Below-threshold transactions remain in the mempool and become eligible for inclusion if the farmer lowers the configured threshold.
 
 ## Security
 
